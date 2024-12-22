@@ -17,6 +17,18 @@ keymap.set("n", "<Leader>D", '"_D')
 keymap.set("v", "<Leader>d", '"_d')
 keymap.set("v", "<Leader>D", '"_D')
 
+keymap.set("n", "<ESC>", M.save_file)
+
+-- Save while existing insert mode
+keymap.set("i", "<ESC>", "<ESC>:lua require('util').save_file()<CR>")
+
+-- Map q/Q to exit/quit
+keymap.set("n", "q", ":exit<CR>")
+keymap.set("n", "Q", ":qa!<CR>")
+
+-- Delete from line start to end of previous line
+keymap.set("n", "dk", "^hvk$d")
+
 -- Increment/decrement
 keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")
@@ -80,5 +92,5 @@ keymap.set("n", "<Leader>bb", M.move_buf_vsp)
 keymap.set("n", "B", ":BufferLinePick<CR>")
 
 -- Beginning and end of the line
-keymap.set({'n', 'v'}, '<S-h>', '^')
-keymap.set({'n', 'v'}, '<S-l>', '$')
+keymap.set({ "n", "v" }, "<S-h>", "^")
+keymap.set({ "n", "v" }, "<S-l>", "$")
