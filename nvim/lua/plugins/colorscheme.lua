@@ -11,14 +11,11 @@
 --  },
 --}
 return {
+  { "jaregorski/spacecamp" },
   {
-    "jaredgorski/spacecamp",
-    lazy = true,
-    priority = 998,
-    opts = function()
-      return {
-        transparent = true,
-      }
-    end,
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "spacecamp",
+    },
   },
 }
