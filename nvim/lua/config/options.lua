@@ -35,10 +35,7 @@ vim.opt.splitright = true -- Put new windows right of current
 vim.opt.splitkeep = "cursor"
 vim.opt.mouse = "a"
 vim.opt.relativenumber = false
-<<<<<<< HEAD
-=======
 vim.opt.clipboard = "unnamedplus"
->>>>>>> f09c8a8dfd8e81932f27cbc1153b1a1cd6a68207
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])

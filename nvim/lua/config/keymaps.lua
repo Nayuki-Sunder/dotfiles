@@ -19,10 +19,7 @@ keymap.set("v", "<Leader>D", '"_D')
 
 keymap.set("n", "<ESC>", M.save_file)
 
-<<<<<<< HEAD
-=======
 -- Save while existing insert mode
->>>>>>> f09c8a8dfd8e81932f27cbc1153b1a1cd6a68207
 keymap.set("i", "<ESC>", "<ESC>:lua require('util').save_file()<CR>")
 
 -- Map q/Q to exit/quit
