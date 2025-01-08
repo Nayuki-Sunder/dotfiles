@@ -11,6 +11,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- vim.fn.setenv("PATH", vim.fn.getenv("PATH") .. ":" .. vim.fn.expand("~/anaconda3/envs/vision/bin/"))
+
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
